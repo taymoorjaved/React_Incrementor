@@ -24,13 +24,20 @@ export default class App extends React.Component {
     }
 
     render(){
-        debugger;
         return (
             <div>
                 <CountDisplay 
                     counter={this.state.counter} 
                 />
                 <Button 
+                    displayText = "Increment Counter"
+                    mode = "add"
+                    counter={this.state.counter}
+                    updateAppState={(updatedCounter) => this.updateState(updatedCounter)}
+                />
+                <Button
+                    displayText = "Reset Counter"
+                    mode = "reset"
                     counter={this.state.counter}
                     updateAppState={(updatedCounter) => this.updateState(updatedCounter)}
                 />
