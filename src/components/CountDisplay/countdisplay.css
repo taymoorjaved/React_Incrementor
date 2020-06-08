@@ -1,0 +1,8 @@
+.count-display {
+    background: black;
+    color: #ff8c01;
+    font-size: 40px;
+    margin: auto;
+    width: 137px;
+    border: 2px solid;
+}
