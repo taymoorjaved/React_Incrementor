@@ -1,14 +1,17 @@
 import React from "react";
 
+import Button from "@material-ui/core/Button";
+
+
 import "./button.css"
 
-class Button extends React.Component {
+class MyButton extends React.Component {
 
     render(){
         return (
-            <button className={"my-inc-btn"} onClick={this.props.mode === "add" ? () => this.incrementCounter() : this.resetCounter.bind(this)}>
+            <Button variant={this.props.variant} color={this.props.color} onClick={this.props.mode === "add" ? () => this.incrementCounter() : this.resetCounter.bind(this)}>
                 {this.props.displayText}
-            </button>
+            </Button>
         );
     }
 
@@ -34,4 +37,4 @@ class Button extends React.Component {
 
 }
 
-export default Button;
+export default MyButton;
